@@ -28,7 +28,7 @@
 #define DATA_PIN 7
 // #define CLOCK_PIN 13
 
-// hotoresistor analog pin
+// Photoresistor analog pin
 #define LIGHT_PIN 1
 
 //  Array of leds
@@ -119,7 +119,6 @@ void changeColor(){
     // Drag will change by one and
     // hue will be adjusted back
     if(count > dragChangeNum){
-      // CAUTION!!********
       s.drag = (s.drag + 1) % 5;
       for(int k = 0; k < NUM_LEDS; k++){
         leds[k] = CHSV(s.hue, 255, 127 + s.drag * 32);
